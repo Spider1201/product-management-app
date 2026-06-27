@@ -9,9 +9,10 @@ public class Main {
 
         service.addProduct(new Product(01, "Dell Latitude E7270","Laptop", "Dell", 2020));
         service.addProduct(new Product(02, "Iphone 11 pro max","Phone", "Iphone", 2020));
+        service.addProduct(new Product(02, "Momofly 2160","Phone", "Momofly", 2020));
         service.addProduct(new Product(03, "Dell External Keyboard","Keyboard", "Dell", 2020));
         service.addProduct(new Product(04, "hp mouse","Mouse", "HP", 2020));
-        service.addProduct(new Product(05, "Dell Latitude E7270","Laptop", "Dell", 2020));
+        service.addProduct(new Product(05, "Bush Smart TV","Television", "Bush", 2020));
         service.addProduct(new Product(06, "VIVO Adaptor","Apaptor", "VIVO", 2020));
 
         List<Product> products = service.getAllProducts();
@@ -19,5 +20,29 @@ public class Main {
         for(Product p : products){
             System.out.println(p);
         }
+
+        System.out.println("==================================================");
+
+        System.out.println("a Particular product");
+        Product p = service.getProduct("hp mouse");
+        System.out.println(p);
+
+        System.out.println("==================================================");
+        System.out.println("Searched by Brand");
+        Product pb = service.getProductByBrand("Dell");
+        System.out.println(pb);
+
+        System.out.println("==================================================");
+        System.out.println("Searched by type");
+        Product pt = service.getProductByType("Phone");
+        System.out.println(pt);
+
+        System.out.println("==================================================");
+        System.out.println("Search by");
+        List<Product> prods = service.getProductWithText("Dell");
+        for(Product product : prods){
+            System.out.println(product);
+        }
+
     }
 }
