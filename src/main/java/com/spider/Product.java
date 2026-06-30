@@ -1,26 +1,20 @@
 package com.spider;
 
 public class Product {
-    private int id;
     private String name;
     private String type;
     private String brand;
     private int warranty;
 
-    public Product(int id, String name, String type, String brand, int warranty) {
-        this.id = id;
+    public Product( String name, String type, String brand, int warranty) {
         this.name = name;
         this.type = type;
         this.brand = brand;
         this.warranty = warranty;
     }
 
-    public int getId() {
-        return id;
-    }
+    public Product() {
 
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -58,8 +52,7 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", type='" + type + '\'' +
                 ", brand='" + brand + '\'' +
                 ", warranty=" + warranty +
